@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="krig.KrigController">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="700.0">
+         <children>
+            <Label alignment="CENTER" layoutX="284.0" layoutY="39.0" prefHeight="85.0" prefWidth="130.0" text="COMPUTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="285.0" layoutY="572.0" prefHeight="85.0" prefWidth="130.0" text="PLAYER" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Text fx:id="gameState" layoutX="424.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Status" textAlignment="CENTER" wrappingWidth="265.783203125">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Pane layoutX="104.0" layoutY="39.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #C8C8C8;">
+               <children>
+                  <Label layoutX="39.0" layoutY="28.0" text="ComputerPile" />
+                  <Label layoutX="33.0" layoutY="79.0" text="Count:" />
+                  <Text fx:id="computerPileCount" layoutX="75.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+               </children>
+            </Pane>
+            <Pane layoutX="447.0" layoutY="39.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #C8C8C8;">
+               <children>
+                  <Label layoutX="35.0" layoutY="27.0" text="ComputerDeck" />
+                  <Label layoutX="32.0" layoutY="89.0" text="Count:" />
+                  <Text fx:id="computerDeckCount" layoutX="69.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="26" />
+               </children>
+            </Pane>
+            <Pane layoutX="104.0" layoutY="507.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #C8C8C8;">
+               <children>
+                  <Label layoutX="44.0" layoutY="32.0" prefHeight="17.0" prefWidth="63.0" text="PlayerDeck" />
+                  <Label layoutX="32.0" layoutY="89.0" text="Count:" />
+                  <Text fx:id="playerDeckCount" layoutX="69.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="26" />
+               </children>
+            </Pane>
+            <Pane layoutX="447.0" layoutY="507.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #C8C8C8;">
+               <children>
+                  <Label layoutX="50.0" layoutY="35.0" text="PlayerPile" />
+                  <Label layoutX="32.0" layoutY="89.0" text="Count:" />
+                  <Text fx:id="playerPileCount" layoutX="72.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+               </children>
+            </Pane>
+            <Pane layoutX="539.0" layoutY="350.0" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="makeMoveButton" layoutX="6.0" layoutY="14.0" mnemonicParsing="false" onAction="#makeMove" text="Make a Move" />
+                  <Button fx:id="goToWarButton" layoutX="12.0" layoutY="50.0" mnemonicParsing="false" onAction="#war" text="Go To War!" />
+               </children>
+            </Pane>
+            <Pane layoutX="274.0" layoutY="189.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #C8C8C8;">
+               <children>
+                  <Text fx:id="computerActiveCard" layoutX="17.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Card Computer" />
+               </children>
+            </Pane>
+            <Pane layoutX="274.0" layoutY="357.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #C8C8C8;">
+               <children>
+                  <Text fx:id="playerActiveCard" layoutX="27.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Card Player" />
+               </children>
+            </Pane>
+            <Pane layoutX="30.0" layoutY="257.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="saveButton" layoutX="30.0" layoutY="100.0" mnemonicParsing="false" onAction="#save" text="Save" />
+                  <Button fx:id="loadButton" layoutX="121.0" layoutY="100.0" mnemonicParsing="false" onAction="#load" text="Load" />
+                  <TextField fx:id="filename" layoutX="26.0" layoutY="60.0" text="krig_save_file" />
+                  <Text layoutX="30.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Write the name of the file&#10;that you want to save &#10;or load" wrappingWidth="150.0" />
+                  <Text fx:id="fileNotFoundMessage" fill="RED" layoutX="35.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File could not be found!" wrappingWidth="130.0" />
+                  <Text fx:id="fileCantBeReadMessage" fill="#ee0101" layoutX="38.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File could not be read!" wrappingWidth="123.271484375" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
